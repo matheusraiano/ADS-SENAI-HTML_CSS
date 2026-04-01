@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+main div.banner {
+    max-height: 500px;
+}
+main img.banner {
+    width: 100%;
+    height: 500px;
+}
+main section.sobrenos {
+    margin-left: 20%;
+    padding: 5px;
+    width: 60%;
+    text-align: justify;
+    font-size: 18px;
+}
+main h2.tsobrenos {
+    text-align: center;
+    clear: left;
+}
+main img.imagemlogo2 {
+    width: 12%;
+    float: left;
+    margin-right: 10px;
+}
+main div.estab3 {
+    text-align: center;
+    font-size: 18px;
+}
+main div.mapa {
+    text-align: center;
+}
+main section.prod h2 {
+    text-align: center;
+}
+main div.prods {
+    text-align: center;
+    font-size: 18px;
+}
+main ul.listap {
+    margin-left: 35%;
+    text-align: left;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+main img.pc {
+    right: 30%;
+    bottom: -35%;
+    box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.418);
+    border-radius: 10px;
+    opacity: 1;
+    transition: 400ms;
+}
+main img.pc:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+main div.videoo {
+    text-align: center;
+}
+.prodds {
+    display: flex;
+    justify-content: space-around;
+}
+.pdr {
+    width: 35%;
+    margin-left: 15%;
+}
