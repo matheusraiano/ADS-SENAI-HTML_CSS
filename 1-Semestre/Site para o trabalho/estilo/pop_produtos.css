@@ -1,0 +1,13 @@
+@import url(geral.css);
+
+body {
+    background: white;
+}
+img {
+    margin: auto;
+    width: 1200px;
+}
+p {
+    line-height: 1.5;
+    text-align: center;
+}
