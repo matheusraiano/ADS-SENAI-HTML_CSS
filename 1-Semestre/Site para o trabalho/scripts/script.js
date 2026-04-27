@@ -3,31 +3,24 @@ let data = new Date()
 let dia = ['Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado']
 horas.innerHTML = `${data.getHours()}:${data.getMinutes()} - ${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()} - ${dia[data.getDay()]}`
 
-function abrirPop() {
-    open("pop_produtos.html", "_blank", "width=800,height=700")
+//Função para capturar os parâmetros da POP
+function getParametro(infoCapturar){
+    urlParametro=new URLSearchParams(window.location.search);
     
-    document.querySelectorAll(".caixa").forEach(produto => {
-        const desc = produto.getElementById("caixaDesc").innerHTML;
-        const img = produto.getElementById("caixaImg").innerHTML;
-        const preco = produto.getElementById("caixaPreco").innerHTML;
-
-        const dados = {
-            desc, img, preco
-        };
-
-        const encoded = encodeURIComponent(JSON.stringify(dados));
-
-        location.href = `produtos.html?data=${encoded}`;
-    })
+    return urlParametro.get(infoCapturar);
 }
-// DESCOBRIR O ERRO!!!!!!!!!!!!!!!!!!!!!!!!
-function carregarPop() {
-    const params = new URLSearchParams(location.search);
-    const data = params.get("data");
+//Preenche as informações no layout
+document.getElementById("nome-produto").textContent = getParametro("nomeProduto");
+document.getElementById("img-produto").src = getParametro("imgProduto");
+document.getElementById("desc-produto").textContent = getParametro("descProduto");
 
-    const produto = JSON.parse(decodeURIComponent(data));
+//Descrição do produto
+desc_produto="Estes são os panos de prato bordados com passa-fita, laise, fita de cetim e gripir.\n\nEscolha a cor de sua preferência!"
 
-    document.getElementById("desc-produto").innerHTML = produto.desc;
-    document.getElementById("img-produto").innerHTML = produto.img;
-    document.getElementById("preco").innerHTML = produto.preco;
+function abrirDetalhes(nome,imagem,descricao){
+    
+    url=`pop_produtos.html?nomeProduto=${encodeURIComponent(nome)}&imgProduto=${encodeURIComponent(imagem)}&descProduto=${encodeURIComponent(descricao)}`;
+
+    window.open(url, "_blank", "width=800,height=700") 
 }
+
