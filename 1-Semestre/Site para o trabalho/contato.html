@@ -32,7 +32,50 @@
 <!---->
 <!---->
         <main>
-
+            <ul class="contatos-titulo">
+                <li class="contatos-item">Contatos</li>
+            </ul>
+            <div id="formRetorno" class="divRetorno">
+                <p id="textoRetorno" class="texto-contatos"></p>
+            </div>
+            <section id="formulario">
+                <p class="texto-contatos">
+                    Será uma alegria te atender
+                    <br><br>
+                    Você pode nos encontrar no instagram, no Zap ou preencher o form.
+                </p>
+                <form id="frmContato">
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label>* Nome e Sobrenome</label>
+                        <input type="text" name="" id="nomesobrenome" class="input-padrao" required>
+                        <label>* Email</label>
+                        <input type="email" name="" id="email" class="input-padrao" placeholder="seuemail@gmail.com" required>
+                        <label>* Telefone</label>
+                        <input type="tel" name="" id="telefone" class="input-padrao" placeholder="(XX) XXXXX-XXXX" required>
+                        <label>* Mensagem</label>
+                        <textarea name="" id="mensagem" cols="70" rows="10" class="input-padrao" required></textarea>
+                        <label>
+                            <input type="radio" value="radio-mail" name="Contato">E-mail
+                            <input type="radio" value="radio-telefone" name="Contato">Telefone
+                            <input type="radio" value="radio-zap" name="Contato">Zap
+                        </label>
+                        <br>
+                        <label>Qual o motivo do seu contato?
+                            <select>
+                                <option>Selecione</option>
+                                <option>Dúvida</option>
+                                <option>Sugestão</option>
+                                <option>Elogio</option>
+                                <option>Reclamação</option>
+                            </select>
+                        </label>
+                        <br>
+                    </fieldset>
+                    <label><input type="checkbox" class="chk">Gostaria de receber nossas novidades por e-mail?</label>
+                    <input type="submit" value="Enviar Formulário" id="enviar" class="enviar">
+                </form>
+            </section>
         </main>
 <!---->
 <!---->
@@ -51,4 +94,5 @@
 <!---->
 <!---->
     </body>
+    <script src="scripts/form.js"></script>
 </html>

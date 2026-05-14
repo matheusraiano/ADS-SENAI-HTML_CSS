@@ -5,15 +5,37 @@ body {
 }
 section {
     display: flex;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
+}
+div.slider {
+    display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    padding: 10px;
 }
 img {
-    width: 50%;
+    width: 35%;
 }
 p {
     line-height: 1.5;
     text-align: center;
+}
+
+p#desc-produto {
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p#preco-produto {
+    color: green;
+    font-size: larger;
+    font-weight: bolder;
 }
